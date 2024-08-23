@@ -56,7 +56,7 @@ for ser in shows:
 # alldata sorted 
 alldata = sorted(alldata, key=lambda s:s[1][1]*100+s[1][2])
 
-print("where the broadcast dates are out of order according to series order")
+# print("where the broadcast dates are out of order according to series order")
 
 outof = []
 
@@ -64,12 +64,10 @@ for ss in range(len(show)):
     for d in range(len(show[ss])):
         if d>0:
             if show[ss][d][0]<show[ss][d-1][0]:
-                print((d,show[ss][d-1],show[ss][d]))
+                # print((d,show[ss][d-1],show[ss][d]))
                 outof.extend(show[ss][d-1])
 
-print()
-print([o[3] for o in outof])
-print()
+
 
 def printout():
     print("| Date       | Show | Episode |Warning|")
@@ -78,6 +76,7 @@ def printout():
         print(f"|{e[0]} | {e[1][0]} | {e[1][3]} | {' *sequence*' if e[1][3] in [o[3] for o in outof] else ''}|")
 
 
-printout()
+if __name__ == "__main__":
+    printout()
 
-print("if there are sequence warnings fix and rerun printout")
+# print("if there are sequence warnings fix and rerun printout")

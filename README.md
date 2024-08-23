@@ -1,6 +1,6 @@
 # csi-imdb-scraper
 
-This is a scraper project for IMDB data for CSI shows.
+This is a scraper project for IMDB data for CSI shows. Requires ```requests```
 
 ## Available Objects
 
@@ -24,6 +24,6 @@ from csi import *
 
 # Collect data for all shows
 # (This will be done automatically when the script is run)
+```
 
-# Print the collected data
-printout()
+alternatively run: ```python csi.py```
